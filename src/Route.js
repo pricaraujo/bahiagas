@@ -9,6 +9,7 @@ import './App.css';
 import ModuleView from './Screens/ModuleView.js'
 import View from "./Screens/View.js";
 import Home from "./Screens/Home.js";
+import ViewSupplier from "./Screens/Viewsupplier";
 
 function AppRoutes() {
 
@@ -23,6 +24,9 @@ function AppRoutes() {
           </Route>
           <Route exact path="/moduleview">
               <ModuleView />
+            </Route>
+            <Route exact path="/view/supplier">
+              <ViewSupplier/>
             </Route>
         </Switch>
 </Router>

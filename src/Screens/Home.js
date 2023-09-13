@@ -18,15 +18,9 @@ function Home() {
                     <Navbar1 />
                 </div>
                 <div className="container">
-                    <h4 style={{ fontFamily: 'Roboto' }}>CATU - ALAGOINHA </h4>
                     <Container>
-                        <Row md={4} style={{ position: 'center' }}>
-                            <Col style={{ margin: '20px', padding: '0px' }}><Card /></Col>
-                            <Col style={{ margin: '20px', padding: '0px' }}><Card /></Col>
-                            <Col style={{ margin: '20px', padding: '0px' }}><Card /></Col>
-                            <Col style={{ margin: '20px', padding: '0px' }}><Card /></Col>
-                            <Col style={{ margin: '20px', padding: '0px' }}><Card /></Col>
-                            <Col style={{ margin: '20px', padding: '0px' }}><Card /></Col>
+                        <Row md={4} style={{ position: 'center', margin: '20px', padding: '0px' }}>
+                            <Card />
                         </Row>
                     </Container>
                     <Footer />

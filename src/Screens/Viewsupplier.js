@@ -12,7 +12,7 @@ import Edit from './ModuleEdit.js'
 import { useLocation } from 'react-router-dom';
 import FormularioEditavel from '../Components/Form.js';
 
-function View() {
+function ViewSupplier() {
   const location = useLocation();
   const selectedItems = location.state.selectedItems;
 
@@ -23,28 +23,16 @@ function View() {
     </div>
     <div>
       <br/>
-      {selectedItems.item1 && (
+      {selectedItems.sup1 && (
         <div>
           <h2><FormularioEditavel/></h2>
           {/* Coloque as informações relacionadas a S1 aqui */}
         </div>
       )}
-      {selectedItems.item2 && (
+      {selectedItems.sup2 && (
         <div>
           <h2><FormularioEditavel/></h2>
           {/* Coloque as informações relacionadas a S2 aqui */}
-        </div>
-      )}
-      {selectedItems.item3 && (
-        <div>
-          <h2><FormularioEditavel/></h2>
-          {/* Coloque as informações relacionadas a S3 aqui */}
-        </div>
-      )}
-      {selectedItems.item4 && (
-        <div>
-          <h2><FormularioEditavel/></h2>
-          {/* Coloque as informações relacionadas a S3 aqui */}
         </div>
       )}
     </div>
@@ -55,4 +43,4 @@ function View() {
   );
 }
 
-export default View;
+export default ViewSupplier;

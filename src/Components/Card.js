@@ -9,15 +9,39 @@ import {
 
 function BasicExample() {
   return (
-    <Card style={{ width: '18rem', margin: '10px', boxShadow: '0 0 10px gray' }}>
+    <><Card style={{ width: '18rem', margin: '10px', boxShadow: '0 0 10px gray' }}>
       <Card.Body>
-        <Card.Title>Módulo</Card.Title>
+        <Card.Title>MovPro</Card.Title>
         <Card.Text>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Programação de volume de gás e alocação com restrições contratuais.
         </Card.Text>
         <Link to='/moduleview'><Button>Saiba Mais</Button></Link>
       </Card.Body>
-    </Card>
+    </Card><Card style={{ width: '18rem', margin: '10px', boxShadow: '0 0 10px gray' }}>
+        <Card.Body>
+          <Card.Title>MixPro</Card.Title>
+          <Card.Text>
+          Modelagem da rede de distribuição. Simulações e otimização em múltiplos cenários.
+          </Card.Text>
+          <Link to='/moduleview'><Button>Saiba Mais</Button></Link>
+        </Card.Body>
+      </Card><Card style={{ width: '18rem', margin: '10px', boxShadow: '0 0 10px gray' }}>
+        <Card.Body>
+          <Card.Title>Control</Card.Title>
+          <Card.Text>
+          Módulo de controle automático com elemento final de controle
+          </Card.Text>
+          <Link to='/moduleview'><Button>Saiba Mais</Button></Link>
+        </Card.Body>
+      </Card><Card style={{ width: '18rem', margin: '10px', boxShadow: '0 0 10px gray' }}>
+        <Card.Body>
+          <Card.Title>IA</Card.Title>
+          <Card.Text>
+         Medições integradas, resultados precisos e identificação de padrão
+          </Card.Text>
+          <Link to='/moduleview'><Button>Saiba Mais</Button></Link>
+        </Card.Body>
+      </Card></>
   );
 }
 

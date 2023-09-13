@@ -18,8 +18,8 @@ class Navbar1 extends React.Component{
 
 <div className="container">
       <Router>
-      <Navbar bg="transparent" style={{fontFamily: 'Ubuntu'}}expand="lg">
-        <Navbar.Brand href="#home">EXPERT-GÁS</Navbar.Brand>
+      <Navbar bg="transparent" style={{fontFamily: 'Ubuntu', color:'azure'}}expand="lg">
+        <Navbar.Brand href="#home">SaaS|ExpertGas</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
