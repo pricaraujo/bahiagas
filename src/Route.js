@@ -10,6 +10,7 @@ import ModuleView from './Screens/ModuleView.js'
 import View from "./Screens/View.js";
 import Home from "./Screens/Home.js";
 import ViewSupplier from "./Screens/Viewsupplier";
+import ViewOtimization from './Screens/ViewOtimization'
 
 function AppRoutes() {
 
@@ -27,6 +28,9 @@ function AppRoutes() {
             </Route>
             <Route exact path="/view/supplier">
               <ViewSupplier/>
+            </Route>
+            <Route exact path="/view/otimization">
+              <ViewOtimization/>
             </Route>
         </Switch>
 </Router>

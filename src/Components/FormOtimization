@@ -1,0 +1,29 @@
+import React, { useState } from 'react';
+import { Table } from 'react-bootstrap';
+
+function Formulario() {
+  const [info1, setInfo1] = useState('1,00000');
+  const [info2, setInfo2] = useState('2,00000');
+  // ... (outras variáveis de estado) ...
+
+  const handleInputChange = (e, setterFunction) => {
+    const newValue = e.target.value;
+    setterFunction(newValue);
+  };
+
+  return (
+    <Table bordered hover>
+      <thead>
+        <tr>
+          <th style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>Dados do Manual</th>
+          <th style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>Dados Otimizados</th>
+        </tr>
+      </thead>
+      <tbody>
+        {/* Seus campos de entrada aqui */}
+      </tbody>
+    </Table>
+  );
+}
+
+export default Formulario;
