@@ -1,16 +1,13 @@
-import React from 'react'
-import Footer from '../Components/Footer.js'
-import {
-  BrowserRouter as Router,
-  Link
-} from "react-router-dom"
+import React from 'react';
+import Footer from '../Components/Footer.js';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
-import Navbar1 from '../Components/Navbar.js'
+import Navbar1 from '../Components/Navbar.js';
 import Button from 'react-bootstrap/Button';
 import Accordion from 'react-bootstrap/Accordion';
-import Edit from './ModuleEdit.js'
+import Edit from './ModuleEdit.js';
 import { useLocation } from 'react-router-dom';
-import FormularioEditavel from '../Components/Form.js';
+import FormularioEditavel from '../Components/FormSupplier.js';
 
 function ViewSupplier() {
   const location = useLocation();
@@ -18,27 +15,18 @@ function ViewSupplier() {
 
   return (
     <>
-    <div>
-      <Navbar1/>
-    </div>
-    <div>
-      <br/>
-      {selectedItems.sup1 && (
-        <div>
-          <h2><FormularioEditavel/></h2>
-          {/* Coloque as informações relacionadas a S1 aqui */}
+      <div>
+        <Navbar1 />
+      </div>
+      <div className="text-center mt-5">
+        <h2>Dados do fornecedor</h2>
+        <div className="smaller-form mx-auto">
+          <FormularioEditavel />
         </div>
-      )}
-      {selectedItems.sup2 && (
-        <div>
-          <h2><FormularioEditavel/></h2>
-          {/* Coloque as informações relacionadas a S2 aqui */}
-        </div>
-      )}
-    </div>
-    <div>
-      <Footer/>
-    </div>
+      </div>
+      <div>
+        <Footer />
+      </div>
     </>
   );
 }

@@ -10,7 +10,7 @@ import Button from 'react-bootstrap/Button';
 import Accordion from 'react-bootstrap/Accordion';
 import Edit from './ModuleEdit.js'
 import { useLocation } from 'react-router-dom';
-import FormularioEditavel from '../Components/Form.js';
+import Formulario from '../Components/Form.js';
 
 function View() {
   const location = useLocation();
@@ -24,27 +24,87 @@ function View() {
     <div>
       <br/>
       {selectedItems.item1 && (
-        <div>
-          <h2><FormularioEditavel/></h2>
-          {/* Coloque as informações relacionadas a S1 aqui */}
+        <div className="container">
+        <br />
+        <div className="row">
+          <div className="col-md-6">
+            <h3>Dados do Usuário</h3>
+            <div style={{ marginTop: '20px' }}>
+          <Button variant="primary">Usar Dados Automáticos</Button>
+        </div>
+            <Formulario />
+          </div>
+          <div className="col-md-6">
+          <h3>Dados Automáticos</h3>
+          <div style={{ marginTop: '20px' }}>
+          <Button variant="primary">Usar Dados Manuais</Button>
+        </div>
+            <Formulario />
+          </div>
+        </div>
         </div>
       )}
       {selectedItems.item2 && (
-        <div>
-          <h2><FormularioEditavel/></h2>
-          {/* Coloque as informações relacionadas a S2 aqui */}
+        <div className="container">
+        <br />
+        <div className="row">
+          <div className="col-md-6">
+            <h3>Dados do Usuário</h3>
+            <div style={{ marginTop: '20px' }}>
+          <Button variant="primary">Usar Dados Automáticos</Button>
+        </div>
+            <Formulario />
+          </div>
+          <div className="col-md-6">
+          <h3>Dados Automáticos</h3>
+          <div style={{ marginTop: '20px' }}>
+          <Button variant="primary">Usar Dados Manuais</Button>
+        </div>
+            <Formulario />
+          </div>
+        </div>
         </div>
       )}
       {selectedItems.item3 && (
-        <div>
-          <h2><FormularioEditavel/></h2>
-          {/* Coloque as informações relacionadas a S3 aqui */}
-        </div>
+          <div className="container">
+          <br />
+          <div className="row">
+            <div className="col-md-6">
+              <h3>Dados do Usuário</h3>
+              <div style={{ marginTop: '20px' }}>
+            <Button variant="primary">Usar Dados Automáticos</Button>
+          </div>
+              <Formulario />
+            </div>
+            <div className="col-md-6">
+            <h3>Dados Automáticos</h3>
+            <div style={{ marginTop: '20px' }}>
+            <Button variant="primary">Usar Dados Manuais</Button>
+          </div>
+              <Formulario />
+            </div>
+          </div>
+          </div>
       )}
       {selectedItems.item4 && (
-        <div>
-          <h2><FormularioEditavel/></h2>
-          {/* Coloque as informações relacionadas a S3 aqui */}
+          <div className="container">
+        <br />
+        <div className="row">
+          <div className="col-md-6">
+            <h3>Dados do Usuário</h3>
+            <div style={{ marginTop: '20px' }}>
+          <Button variant="primary">Usar Dados Automáticos</Button>
+        </div>
+            <Formulario />
+          </div>
+          <div className="col-md-6">
+          <h3>Dados Automáticos</h3>
+          <div style={{ marginTop: '20px' }}>
+          <Button variant="primary">Usar Dados Manuais</Button>
+        </div>
+            <Formulario />
+          </div>
+        </div>
         </div>
       )}
     </div>
