@@ -115,7 +115,7 @@ function FormularioEditavel() {
         </tr>
         <tr>
           <td colSpan="2" style={{ backgroundColor: '#e6e6e6', fontSize: '18px', textAlign: 'center' }}>
-            Informações
+            Composição
           </td>
         </tr>
         <tr>

@@ -99,9 +99,6 @@ function View() {
           </div>
           <div className="col-md-6">
           <h3>Dados Automáticos</h3>
-          <div style={{ marginTop: '20px' }}>
-          <Button variant="primary">Usar Dados Manuais</Button>
-        </div>
             <Formulario />
           </div>
         </div>

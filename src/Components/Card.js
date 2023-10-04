@@ -15,7 +15,7 @@ function BasicExample() {
         <Card.Text>
         Programação de volume de gás e alocação com restrições contratuais.
         </Card.Text>
-        <Link to='/moduleview'><Button>Saiba Mais</Button></Link>
+        <Link to='/moduleview'><Button>Acessar</Button></Link>
       </Card.Body>
     </Card><Card style={{ width: '18rem', margin: '10px', boxShadow: '0 0 10px gray' }}>
         <Card.Body>
@@ -23,7 +23,7 @@ function BasicExample() {
           <Card.Text>
           Modelagem da rede de distribuição. Simulações e otimização em múltiplos cenários.
           </Card.Text>
-          <Link to='/moduleview'><Button>Saiba Mais</Button></Link>
+          <Link to='/moduleview'><Button>Acessar</Button></Link>
         </Card.Body>
       </Card><Card style={{ width: '18rem', margin: '10px', boxShadow: '0 0 10px gray' }}>
         <Card.Body>
@@ -31,7 +31,7 @@ function BasicExample() {
           <Card.Text>
           Módulo de controle automático com elemento final de controle
           </Card.Text>
-          <Link to='/moduleview'><Button>Saiba Mais</Button></Link>
+          <Link to='/moduleview'><Button>Acessar</Button></Link>
         </Card.Body>
       </Card><Card style={{ width: '18rem', margin: '10px', boxShadow: '0 0 10px gray' }}>
         <Card.Body>
@@ -39,7 +39,7 @@ function BasicExample() {
           <Card.Text>
          Medições integradas, resultados precisos e identificação de padrão
           </Card.Text>
-          <Link to='/moduleview'><Button>Saiba Mais</Button></Link>
+          <Link to='/moduleview'><Button>Acessar</Button></Link>
         </Card.Body>
       </Card></>
   );
