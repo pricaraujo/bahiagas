@@ -29,10 +29,10 @@ function View() {
        <div className="row">
          <div className="col-md-6">
            <h3>Dados do Usuário</h3>
-           <div style={{ marginTop: '20px' }}>
+           <Formulario />
+               <div style={{ marginTop: '20px' }}>
          <Button variant="primary">Usar Dados Automáticos</Button>
        </div>
-           <Formulario />
          </div>
          <div className="col-md-6">
          <h3>Dados Automáticos</h3>
@@ -43,57 +43,57 @@ function View() {
       )}
       {selectedItems.item2 && (
         <div className="container">
-        <br />
-        <div className="row">
-          <div className="col-md-6">
-            <h3>Dados do Usuário</h3>
-            <div style={{ marginTop: '20px' }}>
-          <Button variant="primary">Usar Dados Automáticos</Button>
-        </div>
-            <Formulario />
-          </div>
-          <div className="col-md-6">
-          <h3>Dados Automáticos</h3>
-            <Formulario />
-          </div>
-        </div>
-        </div>
+       <br />
+       <div className="row">
+         <div className="col-md-6">
+           <h3>Dados do Usuário</h3>
+           <Formulario />
+               <div style={{ marginTop: '20px' }}>
+         <Button variant="primary">Usar Dados Automáticos</Button>
+       </div>
+         </div>
+         <div className="col-md-6">
+         <h3>Dados Automáticos</h3>
+           <Formulario />
+         </div>
+       </div>
+       </div>
       )}
       {selectedItems.item3 && (
           <div className="container">
-          <br />
-          <div className="row">
-            <div className="col-md-6">
-              <h3>Dados do Usuário</h3>
-              <div style={{ marginTop: '20px' }}>
-            <Button variant="primary">Usar Dados Automáticos</Button>
-          </div>
-              <Formulario />
-            </div>
-            <div className="col-md-6">
-            <h3>Dados Automáticos</h3>
-              <Formulario />
-            </div>
-          </div>
-          </div>
+       <br />
+       <div className="row">
+         <div className="col-md-6">
+           <h3>Dados do Usuário</h3>
+           <Formulario />
+               <div style={{ marginTop: '20px' }}>
+         <Button variant="primary">Usar Dados Automáticos</Button>
+       </div>
+         </div>
+         <div className="col-md-6">
+         <h3>Dados Automáticos</h3>
+           <Formulario />
+         </div>
+       </div>
+       </div>
       )}
       {selectedItems.item4 && (
-          <div className="container">
-        <br />
-        <div className="row">
-          <div className="col-md-6">
-            <h3>Dados do Usuário</h3>
-            <div style={{ marginTop: '20px' }}>
-          <Button variant="primary">Usar Dados Automáticos</Button>
-        </div>
-            <Formulario />
-          </div>
-          <div className="col-md-6">
-          <h3>Dados Automáticos</h3>
-            <Formulario />
-          </div>
-        </div>
-        </div>
+         <div className="container">
+       <br />
+       <div className="row">
+         <div className="col-md-6">
+           <h3>Dados do Usuário</h3>
+           <Formulario />
+               <div style={{ marginTop: '20px' }}>
+         <Button variant="primary">Usar Dados Automáticos</Button>
+       </div>
+         </div>
+         <div className="col-md-6">
+         <h3>Dados Automáticos</h3>
+           <Formulario />
+         </div>
+       </div>
+       </div>
       )}
     </div>
     <div>
