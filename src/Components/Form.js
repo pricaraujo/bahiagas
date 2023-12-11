@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import { Table, Button } from 'react-bootstrap';
+import axios from 'axios';
 
 function FormularioEditavel() {
-  const [info1, setInfo1] = useState('1,00000');
-  const [info2, setInfo2] = useState('2,00000');
-  const [info3, setInfo3] = useState('3,00000');
-  const [info4, setInfo4] = useState('4,00000');
-  const [info5, setInfo5] = useState('5,00000');
-  const [info6, setInfo6] = useState('6,00000');
-  const [info7, setInfo7] = useState('7,00000');
-  const [info8, setInfo8] = useState('8,00000');
-  const [info9, setInfo9] = useState('9,00000');
-  const [info10, setInfo10] = useState('10,00000');
-  const [info11, setInfo11] = useState('11,00000');
-  const [info12, setInfo12] = useState('12,00000');
-  const [info13, setInfo13] = useState('13,00000');
+  const [info1, setInfo1] = useState('0.0151');
+  const [info2, setInfo2] = useState('0.034');
+  const [info3, setInfo3] = useState('0.571');
+  const [info4, setInfo4] = useState('0.0095');
+  const [info5, setInfo5] = useState('0.010');
+  const [info6, setInfo6] = useState('0.893');
+  const [info7, setInfo7] = useState('0.132');
+  const [info8, setInfo8] = useState('0.0457');
+  const [info9, setInfo9] = useState('0.01296');
+  const [info10, setInfo10] = useState('0.00487');
+  const [info11, setInfo11] = useState('0.076');
+  const [info12, setInfo12] = useState('0.01097');
   const [indiceWobbe, setIndiceWobbe] = useState('');
   const [poderCalorifico, setPoderCalorifico] = useState('');
   const [numeroMetano, setNumeroMetano] = useState('');
@@ -271,19 +271,6 @@ function FormularioEditavel() {
               type="text"
               value={info12}
               onChange={(e) => handleInputChange(e, setInfo12)}
-            />
-          </td>
-        </tr>
-        <tr>
-          <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
-            C4+ (%mol/mol)
-          </td>
-          <td style={{ backgroundColor: '#ffffff' }}>
-            <input
-              style={{ width: '100%', fontSize: '15px' }}
-              type="text"
-              value={info13}
-              onChange={(e) => handleInputChange(e, setInfo13)}
             />
           </td>
         </tr>
