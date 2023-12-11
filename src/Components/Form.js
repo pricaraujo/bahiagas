@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Table, Button } from 'react-bootstrap';
-import axios from 'axios';
+
 
 function FormularioEditavel() {
   const [info1, setInfo1] = useState('0.0151');
