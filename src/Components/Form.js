@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Table, Button } from 'react-bootstrap';
-import axios from 'axios';
+
 
 function FormularioEditavel(props) {
   const [info1, setInfo1] = useState(parseFloat(props.result.Componente['C1']).toFixed(3));
