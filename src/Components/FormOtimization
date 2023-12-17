@@ -4,7 +4,6 @@ import { Table } from 'react-bootstrap';
 function Formulario() {
   const [info1, setInfo1] = useState('1,00000');
   const [info2, setInfo2] = useState('2,00000');
-  // ... (outras variáveis de estado) ...
 
   const handleInputChange = (e, setterFunction) => {
     const newValue = e.target.value;
@@ -20,7 +19,6 @@ function Formulario() {
         </tr>
       </thead>
       <tbody>
-        {/* Seus campos de entrada aqui */}
       </tbody>
     </Table>
   );

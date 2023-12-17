@@ -15,7 +15,6 @@ import Formulario from '../Components/Form.js';
 function View() {
   const location = useLocation();
   const selectedItems = location.state.selectedItems;
-
   return (
     <>
     <div>
@@ -23,74 +22,74 @@ function View() {
     </div>
     <div>
       <br/>
-      {selectedItems.item1 && (
+      {selectedItems[0]?.checked && (
        <div className="container">
        <br />
        <div className="row">
          <div className="col-md-6">
-           <h3>Dados do Usuário</h3>
-           <Formulario />
+           <h3>Dados de Step 1</h3>
+           <Formulario result = {selectedItems[0].result}/>
                <div style={{ marginTop: '20px' }}>
          <Button variant="primary">Usar Dados Automáticos</Button>
        </div>
          </div>
          <div className="col-md-6">
          <h3>Dados Automáticos</h3>
-           <Formulario />
+         <Formulario result = {selectedItems[0].result}/>
          </div>
        </div>
        </div>
       )}
-      {selectedItems.item2 && (
+      {selectedItems[1]?.checked && (
         <div className="container">
        <br />
        <div className="row">
          <div className="col-md-6">
-           <h3>Dados do Usuário</h3>
-           <Formulario />
+           <h3>Dados de Step 2</h3>
+           <Formulario result = {selectedItems[1].result}/>
                <div style={{ marginTop: '20px' }}>
          <Button variant="primary">Usar Dados Automáticos</Button>
        </div>
          </div>
          <div className="col-md-6">
          <h3>Dados Automáticos</h3>
-           <Formulario />
+         <Formulario result = {selectedItems[1].result}/>
          </div>
        </div>
        </div>
       )}
-      {selectedItems.item3 && (
+      {selectedItems[2]?.checked && (
           <div className="container">
-       <br />
+       <br />/
        <div className="row">
          <div className="col-md-6">
-           <h3>Dados do Usuário</h3>
-           <Formulario />
+           <h3>Dados de Step 3</h3>
+           <Formulario result = {selectedItems[2].result}/>
                <div style={{ marginTop: '20px' }}>
          <Button variant="primary">Usar Dados Automáticos</Button>
        </div>
          </div>
          <div className="col-md-6">
          <h3>Dados Automáticos</h3>
-           <Formulario />
+         <Formulario result = {selectedItems[2].result}/>
          </div>
        </div>
        </div>
       )}
-      {selectedItems.item4 && (
+      {selectedItems[3]?.checked && (
          <div className="container">
        <br />
        <div className="row">
          <div className="col-md-6">
-           <h3>Dados do Usuário</h3>
-           <Formulario />
+           <h3>Dados de Step 4</h3>
+           <Formulario result = {selectedItems[3].result}/>
                <div style={{ marginTop: '20px' }}>
          <Button variant="primary">Usar Dados Automáticos</Button>
        </div>
          </div>
          <div className="col-md-6">
          <h3>Dados Automáticos</h3>
-           <Formulario />
+           <Formulario result = {selectedItems[3].result}/>
          </div>
        </div>
        </div>
