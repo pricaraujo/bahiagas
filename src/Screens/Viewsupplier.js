@@ -11,7 +11,6 @@ import FormularioEditavel from '../Components/FormSupplier.js';
 
 function ViewSupplier() {
   const location = useLocation();
-  const selectedItems = location.state.selectedItems;
 
   return (
     <>
@@ -19,10 +18,21 @@ function ViewSupplier() {
         <Navbar1 />
       </div>
       <div className="text-center mt-5">
-        <h2>Dados do fornecedor</h2>
+        <h2>Dados de otimização</h2>
         <div className="smaller-form mx-auto">
           <FormularioEditavel />
         </div>
+        <Link to="/otimization">
+            <Button
+              style={{
+                fontFamily: "Roboto",
+                marginRight: "75px",
+                marginBottom: "300px",
+              }}
+            >
+              Enviar dados para otimização
+            </Button>
+          </Link>
       </div>
       <div>
         <Footer />
