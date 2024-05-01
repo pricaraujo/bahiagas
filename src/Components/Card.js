@@ -41,6 +41,15 @@ function BasicExample() {
           </Card.Text>
           <Link to='/moduleview'><Button>Não disponível</Button></Link>
         </Card.Body>
+      </Card>
+    <Card style={{ width: '18rem', margin: '10px', boxShadow: '0 0 10px gray' }}>
+        <Card.Body>
+          <Card.Title>Otimização</Card.Title>
+          <Card.Text>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Card.Text>
+          <Link to='/viewsupplier'><Button>Acessar</Button></Link>
+        </Card.Body>
       </Card></>
   );
 }
