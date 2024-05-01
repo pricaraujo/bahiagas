@@ -26,10 +26,10 @@ function AppRoutes() {
           <Route exact path="/moduleview">
               <ModuleView />
             </Route>
-            <Route exact path="/view/supplier">
+            <Route exact path="/viewsupplier">
               <ViewSupplier/>
             </Route>
-            <Route exact path="/view/otimization">
+            <Route exact path="/otimization">
               <ViewOtimization/>
             </Route>
         </Switch>
@@ -40,10 +40,3 @@ function AppRoutes() {
 
 export default AppRoutes;
 
-function ModuleViews() {
-  return(
-  <div>
-    aaaa
-  </div>
-  )
-}
