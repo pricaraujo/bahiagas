@@ -2,20 +2,20 @@ import React, { useState } from 'react';
 import { Table, Button } from 'react-bootstrap';
 
 function FormularioEditavel() {
-  const [info1, setInfo1] = useState('1,00000');
-  const [info2, setInfo2] = useState('2,00000');
-  const [info3, setInfo3] = useState('3,00000');
-  const [info4, setInfo4] = useState('4,00000');
-  const [info5, setInfo5] = useState('5,00000');
-  const [info6, setInfo6] = useState('6,00000');
-  const [info7, setInfo7] = useState('7,00000');
-  const [info8, setInfo8] = useState('8,00000');
-  const [info9, setInfo9] = useState('9,00000');
-  const [info10, setInfo10] = useState('10,00000');
-  const [info11, setInfo11] = useState('11,00000');
-  const [info12, setInfo12] = useState('12,00000');
-  const [info13, setInfo13] = useState('13,00000');
-  const [info14, setInfo14] = useState('14,00000');
+  const [info1, setInfo1] = useState('');
+  const [info2, setInfo2] = useState('');
+  const [info3, setInfo3] = useState('');
+  const [info4, setInfo4] = useState('');
+  const [info5, setInfo5] = useState('');
+  const [info6, setInfo6] = useState('');
+  const [info7, setInfo7] = useState('');
+  const [info8, setInfo8] = useState('');
+  const [info9, setInfo9] = useState('');
+  const [info10, setInfo10] = useState('');
+  const [info11, setInfo11] = useState('');
+  const [info12, setInfo12] = useState('');
+  const [info13, setInfo13] = useState('');
+  const [info14, setInfo14] = useState('');
 
   const handleInputChange = (e, setterFunction) => {
     const newValue = e.target.value;
@@ -25,6 +25,32 @@ function FormularioEditavel() {
   return (
     <Table bordered hover>
       <tbody style={{marign: '20px'}}>
+      <tr>
+          <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
+          Volume
+          </td>
+          <td style={{ backgroundColor: '#ffffff' }}>
+            <input
+              style={{ width: '100%', fontSize: '15px' }}
+              type="text"
+              value={info1}
+              onChange={(e) => handleInputChange(e, setInfo1)}
+            />
+          </td>
+        </tr>
+        <tr>
+          <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
+          Dew Point
+          </td>
+          <td style={{ backgroundColor: '#ffffff' }}>
+            <input
+              style={{ width: '100%', fontSize: '15px' }}
+              type="text"
+              value={info1}
+              onChange={(e) => handleInputChange(e, setInfo1)}
+            />
+          </td>
+        </tr>
         <tr>
           <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
           Nitrogênio - N2 (%mol/mol)
