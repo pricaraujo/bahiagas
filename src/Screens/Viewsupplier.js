@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button';
 import Accordion from 'react-bootstrap/Accordion';
 import Edit from './ModuleEdit.js';
 import { useLocation } from 'react-router-dom';
-import FormularioEditavel from '../Components/FormSupplier.js';
+import OptimizationForm from '../Components/FormSupplier.js';
 
 function ViewSupplier() {
   const location = useLocation();
@@ -18,11 +18,11 @@ function ViewSupplier() {
         <Navbar1 />
       </div>
       <div className="text-center mt-5">
-        <h2>Dados de otimização</h2>
+        <h1>Dados de otimização</h1>
         <div className="smaller-form mx-auto">
-          <FormularioEditavel />
+          <OptimizationForm />
         </div>
-        <Link to="/otimization">
+        {/* <Link to="/otimization">
             <Button
               style={{
                 fontFamily: "Roboto",
@@ -32,7 +32,7 @@ function ViewSupplier() {
             >
               Enviar dados para otimização
             </Button>
-          </Link>
+          </Link> */}
       </div>
       <div>
         <Footer />
