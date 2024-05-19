@@ -22,7 +22,7 @@ const OptimizationForm = () => {
     supplier1H2SAmount: '',
     supplier1STAmount: '',
     //Supplier2
-    supplier2Volume: '',
+    supplier2Volume: '0',
     supplier2DewPoint: '',
     supplier2NAmount: '',
     supplier2CO2Amount: '',
@@ -141,7 +141,7 @@ const OptimizationForm = () => {
                 </tr>
                 <tr>
                   <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
-                    Volume
+                    Volume Total (m³/h)
                   </td>
                   <td style={{ backgroundColor: '#ffffff' }}>
                     <input
@@ -155,7 +155,7 @@ const OptimizationForm = () => {
                 </tr>
                 <tr>
                   <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
-                    Dew Point
+                    Dew Point (ppm)
                   </td>
                   <td style={{ backgroundColor: '#ffffff' }}>
                     <input
@@ -183,7 +183,7 @@ const OptimizationForm = () => {
                 </tr>
                 <tr>
                   <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
-                    Dióxido de carbono - CO2
+                    Dióxido de carbono - CO2 (%mol/mol)
                   </td>
                   <td style={{ backgroundColor: '#ffffff' }}>
                     <input
@@ -197,7 +197,7 @@ const OptimizationForm = () => {
                 </tr>
                 <tr>
                   <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
-                    Metano - CH4
+                    Metano - CH4 (%mol/mol)
                   </td>
                   <td style={{ backgroundColor: '#ffffff' }}>
                     <input
@@ -211,7 +211,7 @@ const OptimizationForm = () => {
                 </tr>
                 <tr>
                   <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
-                    Etano - C2H6
+                    Etano - C2H6 (%mol/mol)
                   </td>
                   <td style={{ backgroundColor: '#ffffff' }}>
                     <input
@@ -239,7 +239,7 @@ const OptimizationForm = () => {
                 </tr>
                 <tr>
                   <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
-                    i-Butano - C4H10
+                    i-Butano - C4H10 (%mol/mol)
                   </td>
                   <td style={{ backgroundColor: '#ffffff' }}>
                     <input
@@ -253,7 +253,7 @@ const OptimizationForm = () => {
                 </tr>
                 <tr>
                   <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
-                    n-Butano - C4H10
+                    n-Butano - C4H10 (%mol/mol)
                   </td>
                   <td style={{ backgroundColor: '#ffffff' }}>
                     <input
@@ -267,7 +267,7 @@ const OptimizationForm = () => {
                 </tr>
                 <tr>
                   <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
-                    i-Pentano - C5H12
+                    i-Pentano - C5H12 (%mol/mol)
                   </td>
                   <td style={{ backgroundColor: '#ffffff' }}>
                     <input
@@ -281,7 +281,7 @@ const OptimizationForm = () => {
                 </tr>
                 <tr>
                   <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
-                    n-Pentano - C5H12
+                    n-Pentano - C5H12 (%mol/mol)
                   </td>
                   <td style={{ backgroundColor: '#ffffff' }}>
                     <input
@@ -295,7 +295,7 @@ const OptimizationForm = () => {
                 </tr>
                 <tr>
                   <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
-                    neo-Pentano - C5H12
+                    neo-Pentano - C5H12 (%mol/mol)
                   </td>
                   <td style={{ backgroundColor: '#ffffff' }}>
                     <input
@@ -309,7 +309,7 @@ const OptimizationForm = () => {
                 </tr>
                 <tr>
                   <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
-                    Hexano - C6H14
+                    Hexano - C6H14 (%mol/mol)
                   </td>
                   <td style={{ backgroundColor: '#ffffff' }}>
                     <input
@@ -323,7 +323,7 @@ const OptimizationForm = () => {
                 </tr>
                 <tr>
                   <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
-                    H2S
+                    H2S (mg/m³)
                   </td>
                   <td style={{ backgroundColor: '#ffffff' }}>
                     <input
@@ -337,7 +337,7 @@ const OptimizationForm = () => {
                 </tr>
                 <tr>
                   <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
-                    ST
+                    ST (mg/m³)
                   </td>
                   <td style={{ backgroundColor: '#ffffff' }}>
                     <input
@@ -367,21 +367,15 @@ const OptimizationForm = () => {
                 </tr>
                 <tr>
                   <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
-                    Volume
+                    ---
                   </td>
                   <td style={{ backgroundColor: '#ffffff' }}>
-                    <input
-                      style={{ width: '100%', fontSize: '15px' }}
-                      name="supplier2Volume"
-                      type="text"
-                      value={formData.supplier2Volume}
-                      onChange={handleChange}
-                    />
+                    ---
                   </td>
                 </tr>
                 <tr>
                   <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
-                    Dew Point
+                    Dew Point (ppm)
                   </td>
                   <td style={{ backgroundColor: '#ffffff' }}>
                     <input
@@ -409,7 +403,7 @@ const OptimizationForm = () => {
                 </tr>
                 <tr>
                   <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
-                    Dióxido de carbono - CO2
+                    Dióxido de carbono - CO2 (%mol/mol)
                   </td>
                   <td style={{ backgroundColor: '#ffffff' }}>
                     <input
@@ -423,7 +417,7 @@ const OptimizationForm = () => {
                 </tr>
                 <tr>
                   <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
-                    Metano - CH4
+                    Metano - CH4 (%mol/mol)
                   </td>
                   <td style={{ backgroundColor: '#ffffff' }}>
                     <input
@@ -437,7 +431,7 @@ const OptimizationForm = () => {
                 </tr>
                 <tr>
                   <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
-                    Etano - C2H6
+                    Etano - C2H6 (%mol/mol)
                   </td>
                   <td style={{ backgroundColor: '#ffffff' }}>
                     <input
@@ -465,7 +459,7 @@ const OptimizationForm = () => {
                 </tr>
                 <tr>
                   <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
-                    i-Butano - C4H10
+                    i-Butano - C4H10 (%mol/mol)
                   </td>
                   <td style={{ backgroundColor: '#ffffff' }}>
                     <input
@@ -479,7 +473,7 @@ const OptimizationForm = () => {
                 </tr>
                 <tr>
                   <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
-                    n-Butano - C4H10
+                    n-Butano - C4H10 (%mol/mol)
                   </td>
                   <td style={{ backgroundColor: '#ffffff' }}>
                     <input
@@ -493,7 +487,7 @@ const OptimizationForm = () => {
                 </tr>
                 <tr>
                   <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
-                    i-Pentano - C5H12
+                    i-Pentano - C5H12 (%mol/mol)
                   </td>
                   <td style={{ backgroundColor: '#ffffff' }}>
                     <input
@@ -507,7 +501,7 @@ const OptimizationForm = () => {
                 </tr>
                 <tr>
                   <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
-                    n-Pentano - C5H12
+                    n-Pentano - C5H12 (%mol/mol)
                   </td>
                   <td style={{ backgroundColor: '#ffffff' }}>
                     <input
@@ -521,7 +515,7 @@ const OptimizationForm = () => {
                 </tr>
                 <tr>
                   <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
-                    neo-Pentano - C5H12
+                    neo-Pentano - C5H12 (%mol/mol)
                   </td>
                   <td style={{ backgroundColor: '#ffffff' }}>
                     <input
@@ -535,7 +529,7 @@ const OptimizationForm = () => {
                 </tr>
                 <tr>
                   <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
-                    Hexano - C6H14
+                    Hexano - C6H14 (%mol/mol)
                   </td>
                   <td style={{ backgroundColor: '#ffffff' }}>
                     <input
@@ -549,7 +543,7 @@ const OptimizationForm = () => {
                 </tr>
                 <tr>
                   <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
-                    H2S
+                    H2S (mg/m³)
                   </td>
                   <td style={{ backgroundColor: '#ffffff' }}>
                     <input
@@ -563,7 +557,7 @@ const OptimizationForm = () => {
                 </tr>
                 <tr>
                   <td style={{ backgroundColor: '#f2f2f2', fontSize: '15px' }}>
-                    ST
+                    ST (mg/m³)
                   </td>
                   <td style={{ backgroundColor: '#ffffff' }}>
                     <input

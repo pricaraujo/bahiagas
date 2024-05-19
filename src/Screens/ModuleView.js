@@ -17,178 +17,7 @@ function ModuleView() {
   axios.defaults.headers.post["Content-Type"] = "application/json";
   axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
   axios
-    .get("https://expert-gas-884de807bc21.herokuapp.com/measure/latest/1", {
-      cid: "teste-teste",
-      client: "BAHIAGAS",
-      measuredAt: "2021-12-10T13:49:51",
-      flows: [
-        {
-          origin: "ETC-CATU",
-          dewPoint: 100.0,
-          volume: 1264,
-          components: [
-            {
-              element: "N",
-              amount: 0.4302,
-            },
-            {
-              element: "CO2",
-              amount: 0.0019,
-            },
-            {
-              element: "C1",
-              amount: 1.5988,
-            },
-            {
-              element: "C2",
-              amount: 0.5082,
-            },
-            {
-              element: "C3",
-              amount: 0.467,
-            },
-            {
-              element: "IC4",
-              amount: 0.0614,
-            },
-            {
-              element: "NC4",
-              amount: 0.0997,
-            },
-            {
-              element: "NEOC5",
-              amount: 9.7543,
-            },
-            {
-              element: "IC5",
-              amount: 0.0255,
-            },
-            {
-              element: "NC5",
-              amount: 0.0269,
-            },
-            {
-              element: "C6_PLUS",
-              amount: 0.0028,
-            },
-            {
-              element: "O2",
-              amount: 2.2162,
-            },
-          ],
-        },
-        {
-          origin: "PE-ORIGEM",
-          dewPoint: 35.7,
-          volume: 100,
-          components: [
-            {
-              element: "N",
-              amount: 0.004551,
-            },
-            {
-              element: "CO2",
-              amount: 0.003666,
-            },
-            {
-              element: "C1",
-              amount: 0.84643,
-            },
-            {
-              element: "C2",
-              amount: 0.05454,
-            },
-            {
-              element: "C3",
-              amount: 0.001807,
-            },
-            {
-              element: "IC4",
-              amount: 0.000838,
-            },
-            {
-              element: "NC4",
-              amount: 0.001001,
-            },
-            {
-              element: "NEOC5",
-              amount: 0.00000337,
-            },
-            {
-              element: "IC5",
-              amount: 0.0000334,
-            },
-            {
-              element: "NC5",
-              amount: 0.0000174,
-            },
-            {
-              element: "C6_PLUS",
-              amount: 0.000734,
-            },
-            {
-              element: "O2",
-              amount: 0.0,
-            },
-          ],
-        },
-        {
-          origin: "ERPM-ITAIPAVA",
-          dewPoint: 50.0,
-          volume: 0,
-          components: [
-            {
-              element: "N",
-              amount: 0.4302,
-            },
-            {
-              element: "CO2",
-              amount: 0.0019,
-            },
-            {
-              element: "C1",
-              amount: 1.5988,
-            },
-            {
-              element: "C2",
-              amount: 0.5082,
-            },
-            {
-              element: "C3",
-              amount: 0.467,
-            },
-            {
-              element: "IC4",
-              amount: 0.0614,
-            },
-            {
-              element: "NC4",
-              amount: 0.0997,
-            },
-            {
-              element: "NEOC5",
-              amount: 9.7543,
-            },
-            {
-              element: "IC5",
-              amount: 0.0255,
-            },
-            {
-              element: "NC5",
-              amount: 0.0269,
-            },
-            {
-              element: "C6_PLUS",
-              amount: 0.0028,
-            },
-            {
-              element: "O2",
-              amount: 2.2162,
-            },
-          ],
-        },
-      ],
-    })
+    .get("https://expert-gas-884de807bc21.herokuapp.com/measure/latest/1", {})
     .then((response) => {
       const apiResponse = response.data;
       const steps = apiResponse.split("Step").filter(Boolean);
@@ -217,18 +46,48 @@ function ModuleView() {
       // console.error("Erro na chamada da API:", error);
     });
 
+  const handleOptimizationSubmit = async () => {
+
+      try {
+
+      const response = await axios.get('https://expert-gas-884de807bc21.herokuapp.com/measure/optimization/latest', {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      if (response.data && Object.keys(response.data)[0] && response.data.outcome === 'DONE') {
+
+        var alertMsg = "Fornecedor 1: " + response.data.optimalComposition.Supplier1.toFixed(3) +
+          ", Fornecedor 2: " + response.data.optimalComposition.Supplier2.toFixed(3) +
+          ", Preço Otimizado : " + response.data.optimalValue.toFixed(2)
+
+        alert(alertMsg);
+      } else {
+        alert("Não foi possível calcular");
+      }
+
+    } catch (error) {
+      console.error('Error to send form', error)
+      alert('Error')
+    }
+  };  
+
   return (
     <>
       <div>
         <Navbar1 />
         <br />
         <h4 style={{ fontFamily: "Roboto", marginLeft: "75px" }}>
-          CATU - ALAGOINHA{" "}
+          CATU - ALAGOINHAS{" "}
         </h4>
         <div className="d-flex justify-content-center align-items-center">
           <Checkl />
-          <img src={ModuleImage} alt="Modulo 1" />
-          { buildCheckList && <Checklist result={resultValue} />}
+          <div>
+            <img src={ModuleImage} alt="Modulo 1" />
+            <br/>
+            <Button style={{ marginLeft: "30%"}} onClick={handleOptimizationSubmit}>Otimização da mistura</Button>
+          </div>
+          { buildCheckList && <Checklist result={resultValue} />}          
         </div>
       </div>
       <div>
