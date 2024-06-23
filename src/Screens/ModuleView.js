@@ -1,50 +1,47 @@
 import React from "react";
-import Form from "react-bootstrap/Form";
 import Footer from "../Components/Footer.js";
-import { BrowserRouter as Router, Link } from "react-router-dom";
-
-import ModuleImage from "../images/module1.jpg.png";
+import ModuleImage from "../images/modulo1.jpg.png";
 import Navbar1 from "../Components/Navbar.js";
 import Button from "react-bootstrap/Button";
 import Checklist from "../Components/ChecklistSimulation.js";
 import Checkl from "../Components/Checklistsupplier.js";
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
 function ModuleView() {
-  const [resultValue, setResult] = useState({})
-  const [buildCheckList, setBuildCheckList] = useState(false)
+  const [resultValue, setResult] = useState({});
+  const [buildCheckList, setBuildCheckList] = useState(false);
 
-  axios.defaults.headers.post["Content-Type"] = "application/json";
-  axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
-  axios
-    .get("https://expert-gas-884de807bc21.herokuapp.com/measure/latest/1", {})
-    .then((response) => {
-      const apiResponse = response.data;
-      const steps = apiResponse.split("Step").filter(Boolean);
+  useEffect(() => {
+    axios.get("https://expert-gas-884de807bc21.herokuapp.com/measure/latest/1")
+      .then((response) => {
+        const apiResponse = response.data;
+        const steps = apiResponse.split("Step").filter(Boolean);
 
-      const result = steps.map((step) => {
-        const stepInfo = step.split(". Result: ")[1];
-        const components = stepInfo.split("Componente=")[1].split(", ");
+        const result = steps.map((step) => {
+          const stepInfo = step.split(". Result: ")[1];
+          const components = stepInfo.split("Componente=")[1].split(", ");
 
-        const componentInfo = components.reduce((acc, component) => {
-          const [key, value] = component.split("=");
-          acc[key] = parseFloat(value);
-          return acc;
-        }, {});
+          const componentInfo = components.reduce((acc, component) => {
+            const [key, value] = component.split("=");
+            acc[key] = parseFloat(value);
+            return acc;
+          }, {});
 
-        return {
-          Result: {
-            Componente: componentInfo,
-          },
-        };
+          return {
+            Result: {
+              Componente: componentInfo,
+            },
+          };
+        });
+
+        setResult(result);
+        setBuildCheckList(true);
+      })
+      .catch((error) => {
+        console.error("Erro na chamada da API:", error);
       });
-      
-      setResult(result);
-      setBuildCheckList(true)
-    })
-    .catch((error) => {
-      // console.error("Erro na chamada da API:", error);
-    });
+  }, []);
 
   const handleOptimizationSubmit = async () => {
 
@@ -84,8 +81,8 @@ function ModuleView() {
           <Checkl />
           <div>
             <img src={ModuleImage} alt="Modulo 1" />
-            <br/>
-            <Button style={{ marginLeft: "30%"}} onClick={handleOptimizationSubmit}>Otimização da mistura</Button>
+            <br/><br/>
+            <Button style={{ marginLeft: "40%"}} onClick={handleOptimizationSubmit}>Otimização da mistura</Button>
           </div>
           { buildCheckList && <Checklist result={resultValue} />}          
         </div>
