@@ -3,7 +3,7 @@ import Form from "react-bootstrap/Form";
 import Footer from "../Components/Footer.js";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
-import ModuleImage from "../images/module1.jpg.png";
+import ModuleImage from "../images/modulo1.jpg.png";
 import Navbar1 from "../Components/Navbar.js";
 import Button from "react-bootstrap/Button";
 import Checklist from "../Components/ChecklistSimulation.js";

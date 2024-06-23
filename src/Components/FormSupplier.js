@@ -109,9 +109,9 @@ const OptimizationForm = () => {
       });
       if (response.data && Object.keys(response.data)[0] && response.data.outcome === 'DONE') {
 
-        var alertMsg = "Fornecedor 1: " + response.data.optimalComposition.Supplier1 +
-          ", Fornecedor 2: " + response.data.optimalComposition.Supplier1 +
-          ", Preço Otimizado : " + response.data.optimalValue
+        var alertMsg = "Fornecedor 1: " + response.data.optimalComposition.Supplier1.toFixed(3) +
+          ", Fornecedor 2: " + response.data.optimalComposition.Supplier2.toFixed(3) +
+          ", Preço Otimizado : " + response.data.optimalValue.toFixed(2)
 
         alert(alertMsg); // Exibe a resposta da API se a primeira chave é 'DONE' e 'outcome' existe
       } else {
